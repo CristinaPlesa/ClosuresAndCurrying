@@ -24,13 +24,28 @@ console.log(mouseSound("Mouse"));
 nameEnhancer = (prefix) => { 
   return addSuffix = (suffix) => { 
     return getName = (name) => {
-      return `${prefix} ${name} ${suffix}`
+      return `Hello ${prefix} ${name} ${suffix}!`;
     }
   }
 }
 
-const sirJunior = nameEnhancer("Sir")("the Third");
-console.log(sirJunior("Everton"));
+// function nameEnhancer2(prefix, suffix, name) {
+//   return `Hello ${prefix} ${name} ${suffix}`;
+// }
+
+// console.log(nameEnhancer2("Ms."));
+
+const sir = nameEnhancer("Sir")
+const madam = nameEnhancer("Madam");
+
+const theThird = sir("the Third");
+const theSecond = sir("the second");
+const nameWithPrefixAndSuffix = theThird("Everton")
+const princeHenry = theSecond("Henry");
+const princeEdward = theSecond("Edward");
+const kingFloyd = theThird("Floyd");
+console.log(nameWithPrefixAndSuffix);
+console.log(nameEnhancer("Dutchess")("the XIV")("Elizabeth"));
 
 addMult = (addNum) => {
   return multiply = (multiplyNum) => {
@@ -47,3 +62,19 @@ const multiplyByFour = addTwo(4);
 const f = multiplyByFour(5);
 const n = multiplyByThree(5);
 console.log(n, f);
+
+// Use a closure that takes a person's name, age and occupation and return a string
+// create a function employeeInfo that returns "Employee Marney is x years old and works as a someOccupation"
+
+employeeInfo = (name) => {
+return employeeAge = (age) =>{
+  return employeeOccupation = (occupation) =>{
+    return `${name} is ${age} years old and works as a ${occupation}. Way to go ${name}!!!!!!`
+    }
+  }
+}
+
+const name = employeeInfo("Marney");
+const age = name(30);
+const occupation = age("junior dev");
+console.log(occupation)

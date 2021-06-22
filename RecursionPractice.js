@@ -2,11 +2,11 @@
 
 const reverseWords = (string) => {
  
-  if (!string.length) {
+  if (string === "") {
     return string;
   } else {
     console.log(string);
-   return reverseWords(string.slice(1)).concat(string[0]);
+   return reverseWords(string.slice(1)) + string[0];
 
   }
 }
@@ -18,3 +18,10 @@ const reverseWords = (string) => {
 // "nref"
 
 console.log(reverseWords("I am a cat"));
+
+function spreadArgs() {
+  return;
+}
+
+const array = [1, 2, 3];
+console.log(spreadArgs(...array));
