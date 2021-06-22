@@ -7,3 +7,16 @@ function addPrefix(prefix) {
 }
 const prefix = addPrefix("Sir");
 console.log(prefix("Smith"));
+
+
+// Use a closure to create multiple functions for making various animal noises. For example, it should be possible to do the following:
+
+function soundMaker(sound) {
+  return function(animal) {
+    return `${animal} cries out with a ${sound}!`
+  }
+}
+
+const lionSound = soundMaker("roar");
+const mouseSound = soundMaker("squeak");
+console.log(mouseSound("Mouse"));
