@@ -20,3 +20,14 @@ function soundMaker(sound) {
 const lionSound = soundMaker("roar");
 const mouseSound = soundMaker("squeak");
 console.log(mouseSound("Mouse"));
+
+nameEnhancer = (prefix) => { 
+  return addSuffix = (suffix) => { 
+    return getName = (name) => {
+      return `${prefix} ${name} ${suffix}`
+    }
+  }
+}
+
+const sirJunior = nameEnhancer("Sir")("the Third");
+console.log(sirJunior("Everton"));
