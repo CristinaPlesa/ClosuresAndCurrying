@@ -31,3 +31,19 @@ nameEnhancer = (prefix) => {
 
 const sirJunior = nameEnhancer("Sir")("the Third");
 console.log(sirJunior("Everton"));
+
+addMult = (addNum) => {
+  return multiply = (multiplyNum) => {
+    return number = (num) => {
+      return (num + addNum) * multiplyNum;
+    }
+  }
+}
+
+const addTwoMultiplyByThree = addMult(2)(3)(5);
+const addTwo = addMult(2);
+const multiplyByThree = addTwo(3);
+const multiplyByFour = addTwo(4);
+const f = multiplyByFour(5);
+const n = multiplyByThree(5);
+console.log(n, f);
